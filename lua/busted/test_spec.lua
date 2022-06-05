@@ -17,6 +17,7 @@ describe("Busted", function()
     end)
 
     it("should show output", function()
+      print("This is some output")
       assert.are.same({ a = 1, b= 2, c = 3, d = 4}, { a = 1, b = 4, c = 3, d = 4})
     end)
 
