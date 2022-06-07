@@ -3,6 +3,14 @@ import time
 import unittest
 
 
+def foo():
+    bar()
+
+
+def bar():
+    baz()
+
+
 class TestGroup(unittest.TestCase):
     def test_succeed(self):
         time.sleep(0.2)
@@ -17,7 +25,7 @@ class TestGroup(unittest.TestCase):
 
     def test_error(self):
         time.sleep(0.2)
-        self.foo.bar
+        foo()
 
     def test_fail_with_output(self):
         print("This is some output")
